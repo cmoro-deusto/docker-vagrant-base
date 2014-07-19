@@ -15,7 +15,7 @@ RUN chmod 0440 /etc/sudoers.d/vagrant
 USER vagrant
 RUN mkdir /home/vagrant/.ssh
 RUN chmod 700 /home/vagrant/.ssh
-COPY authorized_keys /home/vagrant/.ssh/authorized_keys
+ADD authorized_keys /home/vagrant/.ssh/authorized_keys
 USER root
 RUN chmod 0600 /home/vagrant/.ssh/authorized_keys
 RUN chown vagrant:vagrant /home/vagrant/.ssh/authorized_keys
