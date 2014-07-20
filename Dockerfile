@@ -16,9 +16,12 @@ USER vagrant
 RUN mkdir /home/vagrant/.ssh
 RUN chmod 700 /home/vagrant/.ssh
 ADD authorized_keys /home/vagrant/.ssh/authorized_keys
+ADD bashrc /home/vagrant/.bashrc
 USER root
 RUN chmod 0600 /home/vagrant/.ssh/authorized_keys
 RUN chown vagrant:vagrant /home/vagrant/.ssh/authorized_keys
+RUN chmod 0644 /home/vagrant/.bashrc
+RUN chown vagrant:vagrant /home/vagrant/.bashrc
 
 EXPOSE 22
 
