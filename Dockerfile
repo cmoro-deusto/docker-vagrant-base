@@ -1,6 +1,6 @@
 # Based on ubuntu 14:04
-FROM phusion/baseimage:0.9.12
-MAINTAINER Xabier Larrakoetxea <slok69@gmail.com>
+FROM phusion/baseimage:latest
+MAINTAINER Carlos Moro (kudos to Slok) <cmoro@deusto.es>
 
 
 # Create vagrant user and group
